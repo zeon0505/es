@@ -39,7 +39,7 @@
             <i class="fas fa-envelope absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
             <input type="email" name="email" value="{{ old('email') }}" required
               class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent @error('email') border-red-400 @enderror"
-              placeholder="admin@es.staimas.ac.id">
+              placeholder="Email">
           </div>
           @error('email')<p class="text-red-500 text-xs mt-1">{{ $message }}</p>@enderror
         </div>
