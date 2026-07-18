@@ -37,6 +37,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('dosens',   DosenController::class)->except(['show']);
         Route::resource('kategoris', KategoriController::class)->except(['show']);
         Route::resource('beritas',  BeritaController::class)->except(['show']);
+        Route::post('/beritas/scrape-url', [BeritaController::class, 'scrapeUrl'])->name('beritas.scrape-url');
         Route::resource('posters',  PosterController::class)->except(['show']);
     });
 });
