@@ -19,12 +19,30 @@ class AdminSeeder extends Seeder
     {
         Schema::disableForeignKeyConstraints();
 
-        // ── Admin User ──
+        // ── Admin Users ──
         User::updateOrCreate(
-            ['email' => 'admin@es.staimas.ac.id'],
+            ['email' => 'yoga@staimas.com'],
             [
-                'name'      => 'Admin Ekonomi Syariah STAIMAS',
-                'password'  => Hash::make('admin123'),
+                'name'      => 'Yoga',
+                'password'  => Hash::make('stmas123'),
+                'is_admin'  => true,
+            ]
+        );
+
+        User::updateOrCreate(
+            ['email' => 'naufal@staimas.com'],
+            [
+                'name'      => 'Naufal',
+                'password'  => Hash::make('stmas123'),
+                'is_admin'  => true,
+            ]
+        );
+
+        User::updateOrCreate(
+            ['email' => 'syafikah@staimas.com'],
+            [
+                'name'      => 'Syafikah',
+                'password'  => Hash::make('stmas123'),
                 'is_admin'  => true,
             ]
         );
