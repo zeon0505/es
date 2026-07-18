@@ -11,7 +11,7 @@ class Berita extends Model
 {
     use HasUuids;
 
-    protected $fillable = ['kategori_id', 'judul', 'slug', 'konten', 'gambar', 'tanggal', 'aktif'];
+    protected $fillable = ['kategori_id', 'judul', 'slug', 'konten', 'gambar', 'link', 'tanggal', 'aktif'];
     protected $casts = ['aktif' => 'boolean', 'tanggal' => 'date'];
 
     public function kategori()
