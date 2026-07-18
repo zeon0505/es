@@ -130,7 +130,7 @@ class BeritaController extends Controller
         }
     }
 
-    private function scrapeImageFromUrl($url)
+    private function scrapeImageFromUrl(string $url): ?string
     {
         try {
             $ch = curl_init();
