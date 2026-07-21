@@ -109,4 +109,12 @@ class PageController extends Controller
             'otherBeritas' => $otherBeritas,
         ]);
     }
+
+    public function akreditasi()
+    {
+        return view('pages.akreditasi', [
+            'title'    => 'Akreditasi Ekonomi Syariah',
+            'subtitle' => 'Sertifikat Akreditasi Program Studi Ekonomi Syariah STAIMAS Wonogiri',
+        ]);
+    }
 }

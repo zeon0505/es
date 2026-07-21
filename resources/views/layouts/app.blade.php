@@ -181,6 +181,7 @@
           <li><a href="{{ route('pages.dosen') }}" class="nav-link hover:text-teal-700 transition-colors py-2 {{ request()->routeIs('pages.dosen') ? 'font-bold text-teal-700 active' : '' }}">DOSEN</a></li>
           <li><a href="{{ route('pages.kurikulum') }}" class="nav-link hover:text-teal-700 transition-colors py-2 {{ request()->routeIs('pages.kurikulum') ? 'font-bold text-teal-700 active' : '' }}">KURIKULUM</a></li>
           <li><a href="{{ route('pages.berita') }}" class="nav-link hover:text-teal-700 transition-colors py-2 {{ request()->routeIs('pages.berita*') ? 'font-bold text-teal-700 active' : '' }}">BERITA ES</a></li>
+          <li><a href="{{ route('pages.akreditasi') }}" class="nav-link hover:text-teal-700 transition-colors py-2 {{ request()->routeIs('pages.akreditasi') ? 'font-bold text-teal-700 active' : '' }}">AKREDITASI</a></li>
         </ul>
       </nav>
  
@@ -202,6 +203,7 @@
         <li><a href="{{ route('pages.dosen') }}" class="flex items-center gap-3 py-3 border-b border-gray-100 text-sm font-semibold text-gray-700 hover:text-teal-700"><i class="fas fa-users w-4 text-teal-600"></i> Dosen</a></li>
         <li><a href="{{ route('pages.kurikulum') }}" class="flex items-center gap-3 py-3 border-b border-gray-100 text-sm font-semibold text-gray-700 hover:text-teal-700"><i class="fas fa-book w-4 text-teal-600"></i> Kurikulum</a></li>
         <li><a href="{{ route('pages.berita') }}" class="flex items-center gap-3 py-3 border-b border-gray-100 text-sm font-semibold text-gray-700 hover:text-teal-700"><i class="fas fa-newspaper w-4 text-teal-600"></i> Berita ES</a></li>
+        <li><a href="{{ route('pages.akreditasi') }}" class="flex items-center gap-3 py-3 border-b border-gray-100 text-sm font-semibold text-gray-700 hover:text-teal-700"><i class="fas fa-certificate w-4 text-teal-600"></i> Akreditasi</a></li>
         <li class="py-4">
           <a href="https://staimaswonogiri.ecampuz.com/eadmisi/" target="_blank" class="flex justify-center items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white py-3 rounded-xl font-bold text-sm shadow transition-colors">
             <i class="fas fa-graduation-cap"></i> Daftar PMB 2025
