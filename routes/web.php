@@ -19,6 +19,8 @@ Route::get('/dosen/{dosen:nidn}', [PageController::class, 'dosenShow'])->name('p
 Route::get('/kurikulum',  [PageController::class, 'kurikulum'])->name('pages.kurikulum');
 Route::get('/berita',     [PageController::class, 'berita'])->name('pages.berita');
 Route::get('/berita/{slug}', [PageController::class, 'beritaShow'])->name('pages.berita.show');
+Route::get('/pengumuman', [PageController::class, 'pengumuman'])->name('pages.pengumuman');
+Route::get('/pengumuman/{key}', [PageController::class, 'pengumumanShow'])->name('pages.pengumuman.show');
 Route::get('/akreditasi', [PageController::class, 'akreditasi'])->name('pages.akreditasi');
 
 // ═══════════════════════════════════════════

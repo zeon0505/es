@@ -32,7 +32,14 @@
         <label class="text-sm font-semibold text-gray-700">Deskripsi Singkat</label>
         <input type="text" name="deskripsi" value="{{ old('deskripsi', $poster?->deskripsi) }}"
           class="w-full px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
-          placeholder="Contoh: Buka Pendaftaran Mahasiswa Baru Program Studi Ekonomi Syariah">
+          placeholder="Contoh: Info kegiatan Program Studi Ekonomi Syariah">
+      </div>
+
+      <div class="space-y-1.5">
+        <label class="text-sm font-semibold text-gray-700">Penjelasan / Isi Lengkap Poster <span class="text-gray-400">(Tampil saat poster diklik)</span></label>
+        <textarea name="konten" rows="8"
+          class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 leading-relaxed resize-y"
+          placeholder="Tuliskan keterangan lengkap, pengumuman detail, syarat & ketentuan, jadwal, atau informasi seputar poster ini...">{{ old('konten', $poster?->konten) }}</textarea>
       </div>
 
       <div class="space-y-1.5">
