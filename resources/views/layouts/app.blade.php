@@ -166,7 +166,7 @@
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
       <a href="{{ route('home') }}" class="flex items-center gap-3 group">
         <div class="logo-icon w-12 h-12 bg-white rounded-full flex items-center justify-center border-2 border-yellow-500 shadow-md overflow-hidden">
-          <img src="{{ asset('assest/LOGO STAIMAS AI.png') }}" alt="STAIMAS Logo" class="w-full h-full object-contain p-0.5">
+          <img src="{{ asset('assest/ES.jpeg') }}" alt="ES Logo" class="w-full h-full object-contain p-0.5">
         </div>
         <div>
           <span class="block text-lg font-extrabold text-teal-700 tracking-tight leading-none">EKONOMI SYARIAH</span>
