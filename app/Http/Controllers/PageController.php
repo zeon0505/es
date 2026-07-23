@@ -71,7 +71,7 @@ class PageController extends Controller
         ]);
     }
 
-    public function beritaShow($slug)
+    public function beritaShow(string $slug)
     {
         $berita = Berita::with('kategori')->where('slug', $slug)->where('aktif', true)->firstOrFail();
 
@@ -101,7 +101,7 @@ class PageController extends Controller
 
         return view('pages.berita-detail', [
             'title'    => $berita->judul,
-            'subtitle' => 'Diterbitkan pada ' . $berita->tanggal->isoFormat('D MMMM Y'),
+            'subtitle' => 'Diterbitkan pada ' . \Carbon\Carbon::parse($berita->tanggal)->isoFormat('D MMMM Y'),
             'berita'   => $berita,
             'related'  => $related,
             'prev'     => $prev,
@@ -115,19 +115,19 @@ class PageController extends Controller
         return view('pages.pengumuman', [
             'title'   => 'Poster & Pengumuman ES',
             'subtitle' => 'Pengumuman resmi, poster informasi, dan kegiatan dari Prodi ES STAIMAS Wonogiri',
-            'posters' => \App\Models\Poster::where('aktif', true)->latest()->get(),
+            'posters' => Poster::where('aktif', true)->latest()->get(),
         ]);
     }
 
-    public function pengumumanShow($key)
+    public function pengumumanShow(string $key)
     {
-        $poster = \App\Models\Poster::where('aktif', true)
+        $poster = Poster::where('aktif', true)
             ->where(function($q) use ($key) {
                 $q->where('slug', $key)->orWhere('id', $key);
             })
             ->firstOrFail();
 
-        $otherPosters = \App\Models\Poster::where('aktif', true)
+        $otherPosters = Poster::where('aktif', true)
             ->where('id', '!=', $poster->id)
             ->latest()->take(4)->get();
 
